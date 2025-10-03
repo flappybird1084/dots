@@ -18,7 +18,8 @@ oshawott
 dratini
 minccino
 treecko
-torchic"
+torchic
+eevee"
 # targetmon=$(shuf -n 1 ~/Documents/projects/coding/scripts/fetched-pokemon.txt)
 targetmon=$(shuf -n 1 <(echo "$pokemon_list"))
 if [ "$random_number" -lt 20 ]; then

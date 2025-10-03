@@ -154,6 +154,13 @@ export PATH=$PATH:~/rians-projects/Coding/ML/llama.cpp/build-rpc-metal/bin
 
 export OLLAMA_KEEP_ALIVE='30m'
 
+# FOR QWEN CODE
+# export OPENAI_BASE_URL="http://100.64.0.23:11434/v1"
+# export OPENAI_MODEL="hf.co/unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF:Q4_K_M"
+# export OPENAI_MODEL="qwen3:30b"
+
+# jetson magic!!
+source ~/rians-projects/Coding/shell/scripts/jetson-magic.sh
 
 alias ezsh='nvim ~/.zshrc'
 alias szsh='source ~/.zshrc'
@@ -165,6 +172,7 @@ alias cd='z'
 alias cenv='python3 -m venv env'
 alias senv='source env/bin/activate'
 alias ssh-robotics="/Users/rianbutala/rians-projects/Coding/shell/scripts/auto-ssh-robotics-pc.exp"
+# alias sj="ssh rian@100.64.0.43"
 alias fwd-jupyter-port='ssh -N -L 8888:localhost:8888 software@100.64.0.25'
 alias ta="tmux attach -t 0"
 alias tabbyserve="tabby serve --device metal --model Qwen2.5-Coder-1.5B --port 8081"

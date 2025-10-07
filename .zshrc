@@ -154,6 +154,9 @@ export PATH=$PATH:~/rians-projects/Coding/ML/llama.cpp/build-rpc-metal/bin
 
 export OLLAMA_KEEP_ALIVE='30m'
 
+#zsh syntax highlight
+source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # FOR QWEN CODE
 # export OPENAI_BASE_URL="http://100.64.0.23:11434/v1"
 # export OPENAI_MODEL="hf.co/unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF:Q4_K_M"
@@ -177,6 +180,7 @@ alias ssh-robotics="ssh software@100.64.0.25"
 alias fwd-jupyter-port='ssh -N -L 8888:localhost:8888 software@100.64.0.25'
 alias ta="tmux attach -t 0"
 alias tabbyserve="tabby serve --device metal --model Qwen2.5-Coder-1.5B --port 8081"
+alias ls="eza"
 
 # fastfetch
 # alias fetch="pokeget random --hide-name | fastfetch -c ~/rians-projects/Coding/iTerm\ Stuff/fetch/config.jsonc --file-raw -"

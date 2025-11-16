@@ -175,6 +175,7 @@ alias cd='z'
 alias cenv='python3 -m venv env'
 alias senv='source env/bin/activate'
 # alias ssh-robotics="/Users/rianbutala/rians-projects/Coding/shell/scripts/auto-ssh-robotics-pc.exp"
+alias lg1-ssh="ssh software@100.64.0.23"
 alias ssh-robotics="ssh software@100.64.0.25"
 # alias sj="ssh rian@100.64.0.43"
 alias fwd-jupyter-port='ssh -N -L 8888:localhost:8888 software@100.64.0.25'

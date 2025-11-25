@@ -162,9 +162,6 @@ source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # export OPENAI_MODEL="hf.co/unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF:Q4_K_M"
 # export OPENAI_MODEL="qwen3:30b"
 
-# jetson magic!!
-source ~/rians-projects/Coding/shell/scripts/jetson-magic.sh
-
 alias ezsh='nvim ~/.zshrc'
 alias szsh='source ~/.zshrc'
 alias ows='open-webui serve'
@@ -175,13 +172,14 @@ alias cd='z'
 alias cenv='python3 -m venv env'
 alias senv='source env/bin/activate'
 # alias ssh-robotics="/Users/rianbutala/rians-projects/Coding/shell/scripts/auto-ssh-robotics-pc.exp"
+alias lg2-ssh="ssh software@100.64.0.58"
 alias lg1-ssh="ssh software@100.64.0.23"
 alias ssh-robotics="ssh software@100.64.0.25"
-# alias sj="ssh rian@100.64.0.43"
+alias sj="ssh rian@100.64.0.43"
 alias fwd-jupyter-port='ssh -N -L 8888:localhost:8888 software@100.64.0.25'
 alias ta="tmux attach -t 0"
 alias tabbyserve="tabby serve --device metal --model Qwen2.5-Coder-1.5B --port 8081"
-alias ls="eza"
+alias ls="eza --icons"
 
 # fastfetch
 # alias fetch="pokeget random --hide-name | fastfetch -c ~/rians-projects/Coding/iTerm\ Stuff/fetch/config.jsonc --file-raw -"

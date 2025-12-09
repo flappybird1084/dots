@@ -172,6 +172,7 @@ alias cd='z'
 alias cenv='python3 -m venv env'
 alias senv='source env/bin/activate'
 # alias ssh-robotics="/Users/rianbutala/rians-projects/Coding/shell/scripts/auto-ssh-robotics-pc.exp"
+alias rpi-ssh="ssh rian@100.64.0.59"
 alias lg2-ssh="ssh software@100.64.0.58"
 alias lg1-ssh="ssh software@100.64.0.23"
 alias ssh-robotics="ssh software@100.64.0.25"
@@ -180,6 +181,10 @@ alias fwd-jupyter-port='ssh -N -L 8888:localhost:8888 software@100.64.0.25'
 alias ta="tmux attach -t 0"
 alias tabbyserve="tabby serve --device metal --model Qwen2.5-Coder-1.5B --port 8081"
 alias ls="eza --icons"
+alias ur="uv run"
+alias ua="uv add"
+alias urm="uv remove"
+alias ui="uv init --python 3.12"
 
 # fastfetch
 # alias fetch="pokeget random --hide-name | fastfetch -c ~/rians-projects/Coding/iTerm\ Stuff/fetch/config.jsonc --file-raw -"

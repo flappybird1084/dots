@@ -30,9 +30,17 @@ else
 fi
 
 # Copy aerospace config (if AeroSpace is installed)
-if [ -f "/Applications/AeroSpace.app/Contents/Resources/default-config.toml" ]; then
+# if [ -f "/Applications/AeroSpace.app/Contents/Resources/default-config.toml" ]; then
+#     mkdir -p aerospace
+#     cp /Applications/AeroSpace.app/Contents/Resources/default-config.toml ./aerospace
+#     # Remove lines containing 'api' from aerospace config
+#     sed -i '' '/api/d' ./aerospace/default-config.toml
+# else
+#     echo "Warning: AeroSpace config does not exist, skipping"
+# fi
+if [ -f "~/.aerospace.toml" ]; then
     mkdir -p aerospace
-    cp /Applications/AeroSpace.app/Contents/Resources/default-config.toml ./aerospace
+    cp ~/.aerospace.toml ./aerospace
     # Remove lines containing 'api' from aerospace config
     sed -i '' '/api/d' ./aerospace/default-config.toml
 else

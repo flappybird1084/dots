@@ -38,11 +38,11 @@ fi
 # else
 #     echo "Warning: AeroSpace config does not exist, skipping"
 # fi
-if [ -f "~/.aerospace.toml" ]; then
+if [ -f "$HOME/.aerospace.toml" ]; then
     mkdir -p aerospace
-    cp ~/.aerospace.toml ./aerospace
+    cp "$HOME/.aerospace.toml" ./aerospace
     # Remove lines containing 'api' from aerospace config
-    sed -i '' '/api/d' ./aerospace/default-config.toml
+    sed -i '' '/api/d' ./aerospace/.aerospace.toml
 else
     echo "Warning: AeroSpace config does not exist, skipping"
 fi

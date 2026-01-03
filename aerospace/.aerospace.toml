@@ -78,6 +78,7 @@ exec-on-workspace-change = ['/bin/bash', '-c','sketchybar --trigger aerospace_wo
     
 
     alt-cmd-t= 'exec-and-forget open -n /Applications/iTerm.app/'
+    alt-cmd-g= 'exec-and-forget open ~'
     alt-cmd-f= 'macos-native-fullscreen'
 
 

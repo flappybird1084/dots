@@ -151,6 +151,8 @@ alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
 #PATH
 export PATH=$PATH:~/rians-projects/Coding/Python/Fan\ Controller/python\ files/v2
 export PATH=$PATH:~/rians-projects/Coding/ML/llama.cpp/build-rpc-metal/bin
+export PATH=$PATH:~/rians-projects/Coding/shell/m-gpu-btop/bin/
+export PATH=$PATH:~/rians-projects/Coding/shell/scripts/
 
 export OLLAMA_KEEP_ALIVE='30m'
 
@@ -185,6 +187,8 @@ alias ur="uv run"
 alias ua="uv add"
 alias urm="uv remove"
 alias ui="uv init --python 3.12"
+export UV_PYTHON="3.12"
+alias new='aerospace workspace "$(find_empty_workspace.sh)"'
 
 # fastfetch
 # alias fetch="pokeget random --hide-name | fastfetch -c ~/rians-projects/Coding/iTerm\ Stuff/fetch/config.jsonc --file-raw -"

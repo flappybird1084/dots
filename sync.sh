@@ -4,6 +4,7 @@
 rm -rf ./fetch
 rm -rf ./nvim
 rm -rf ./aerospace
+rm -rf ./scripts
 rm -f .zshrc
 rm -f .tmux.conf
 
@@ -16,6 +17,13 @@ if [ -d "../fetch" ]; then
     done
 else
     echo "Warning: ../fetch does not exist, skipping"
+fi
+
+# Copy scripts directory from ~/rians-projects/Coding/shell (if it exists)
+if [ -d "$HOME/rians-projects/Coding/shell/scripts" ]; then
+    cp -r "$HOME/rians-projects/Coding/shell/scripts" .
+else
+    echo "Warning: ~/rians-projects/Coding/shell/scripts does not exist, skipping"
 fi
 
 # Copy nvim directory from ~/.config (if it exists)

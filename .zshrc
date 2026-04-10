@@ -189,6 +189,7 @@ alias urm="uv remove"
 alias ui="uv init --python 3.12"
 export UV_PYTHON="3.12"
 alias new='aerospace workspace "$(find_empty_workspace.sh)"'
+alias wpi="open ~/wpilib/2026/vscode/Visual\ Studio\ Code.app"
 
 # fastfetch
 # alias fetch="pokeget random --hide-name | fastfetch -c ~/rians-projects/Coding/iTerm\ Stuff/fetch/config.jsonc --file-raw -"

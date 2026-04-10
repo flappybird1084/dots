@@ -253,4 +253,6 @@ exec-on-workspace-change = ['/bin/bash', '-c','sketchybar --trigger aerospace_wo
     8 = ['va', 'built', 'secondary']
     9 = ['built', 'va', 'secondary']
     10 = ['built', 'va', 'secondary']
+    11 = ['va', 'built', 'secondary']
+    12 = ['va', 'built', 'secondary']
 

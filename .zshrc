@@ -83,11 +83,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='nvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
@@ -150,7 +150,8 @@ alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
 
 #PATH
 export PATH=$PATH:~/rians-projects/Coding/Python/Fan\ Controller/python\ files/v2
-export PATH=$PATH:~/rians-projects/Coding/ML/llama.cpp/build-rpc-metal/bin
+export PATH=$PATH:~/rians-projects/Coding/ML/llama.cpp/build/bin
+alias llama-server="~/rians-projects/Coding/ML/llama.cpp/build/bin/llama-server"
 export PATH=$PATH:~/rians-projects/Coding/shell/m-gpu-btop/bin/
 export PATH=$PATH:~/rians-projects/Coding/shell/scripts/
 
@@ -158,11 +159,6 @@ export OLLAMA_KEEP_ALIVE='30m'
 
 #zsh syntax highlight
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# FOR QWEN CODE
-# export OPENAI_BASE_URL="http://100.64.0.23:11434/v1"
-# export OPENAI_MODEL="hf.co/unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF:Q4_K_M"
-# export OPENAI_MODEL="qwen3:30b"
 
 alias ezsh='nvim ~/.zshrc'
 alias szsh='source ~/.zshrc'
@@ -190,9 +186,12 @@ alias ui="uv init --python 3.12"
 export UV_PYTHON="3.12"
 alias new='aerospace workspace "$(find_empty_workspace.sh)"'
 alias wpi="open ~/wpilib/2026/vscode/Visual\ Studio\ Code.app"
+alias tsr="tailscale switch rian"
+alias tsa="tailscale switch avinash"
+alias ts=tailscale
+alias tss="tailscale status"
+alias qwenserve="llama-server -hf unsloth/Qwen3.6-35B-A3B-GGUF:UD-Q3_K_M --jinja --port 8078 -c 262144"
 
-# fastfetch
-# alias fetch="pokeget random --hide-name | fastfetch -c ~/rians-projects/Coding/iTerm\ Stuff/fetch/config.jsonc --file-raw -"
 alias fetch="~/rians-projects/Coding/shell/fetch/fetch.sh"
 fetch
 

@@ -157,6 +157,9 @@ export PATH=$PATH:~/rians-projects/Coding/shell/scripts/
 
 export OLLAMA_KEEP_ALIVE='30m'
 
+# llm stuff
+source ~/rians-projects/Coding/shell/dots/llms/llms.sh
+
 #zsh syntax highlight
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -173,6 +176,7 @@ alias senv='source env/bin/activate'
 alias rpi-ssh="ssh rian@100.64.0.59"
 alias lg2-ssh="ssh software@100.64.0.58"
 alias lg1-ssh="ssh software@100.64.0.23"
+alias chonk="ssh rianbutala@100.64.0.39"
 alias ssh-robotics="ssh software@100.64.0.25"
 alias sj="ssh rian@100.64.0.43"
 alias fwd-jupyter-port='ssh -N -L 8888:localhost:8888 software@100.64.0.25'
@@ -190,10 +194,12 @@ alias tsr="tailscale switch rian"
 alias tsa="tailscale switch avinash"
 alias ts=tailscale
 alias tss="tailscale status"
-alias qwenserve="llama-server -hf unsloth/Qwen3.6-35B-A3B-GGUF:UD-Q3_K_M --jinja --port 8078 -c 262144"
+alias qwenserve36moe="llama-server -hf unsloth/Qwen3.6-35B-A3B-GGUF:UD-Q3_K_M --jinja --port 8078 -c 262144"
+alias qwenserve38="llama-server -hf unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_XL --jinja --port 8078 --no-mmproj --top-p 0.95 --top-k 20 --min-p 0.0 --presence-penalty 0 -c 90000 --spec-type draft-mtp --spec-draft-n-max 2"
 
 alias fetch="~/rians-projects/Coding/shell/fetch/fetch.sh"
 fetch
 
 # change terminal binding to vim mode
 bindkey -v
+export PATH="/Users/rianbutala/.local/bin:$PATH"

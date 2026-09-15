@@ -248,11 +248,11 @@ exec-on-workspace-change = ['/bin/bash', '-c','sketchybar --trigger aerospace_wo
     shift-down = ['volume set 0', 'mode main']
 
 [workspace-to-monitor-force-assignment]
-    3 = ['va', 'built', 'secondary']
-    7 = ['va', 'built', 'secondary']
-    8 = ['va', 'built', 'secondary']
-    9 = ['built', 'va', 'secondary']
-    10 = ['built', 'va', 'secondary']
-    11 = ['va', 'built', 'secondary']
-    12 = ['va', 'built', 'secondary']
+    3 = ['va', 'sidecar', 'secondary', 'built']
+    7 = ['va', 'sidecar', 'secondary', 'built']
+    8 = ['va', 'sidecar', 'secondary', 'built']
+    9 = ['built', 'va', 'sidecar', 'secondary']
+    10 = ['built', 'va', 'sidecar', 'secondary']
+    11 = ['va', 'sidecar', 'secondary', 'built']
+    12 = ['va', 'sidecar', 'secondary', 'built']
 
